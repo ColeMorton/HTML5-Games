@@ -1,0 +1,43 @@
+#playground
+{
+    background: #e0ffe0 url('../Content/Images/pixel_grid.jpg');
+    width: 400px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#ball
+{
+    background: #8F0000;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+     
+    left: 150px;
+    top: 100px;
+    border-radius: 10px;
+}
+
+.paddle
+{
+    background: #006E25;
+    left: 50px;
+    top: 70px;
+    position: absolute;
+    width: 30px;
+    height: 70px;
+}
+
+#paddleB
+{
+    left: 320px;
+}
+
+#progressBar {
+    width: 0%;
+    -webkit-transition:width 1s;
+    transition:width 1s;
+    -webkit-transition-timing-function: ease-out;
+}
