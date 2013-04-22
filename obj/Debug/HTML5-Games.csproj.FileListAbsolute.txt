@@ -1,0 +1,5 @@
+C:\GitHub\HTML5-Games\bin\HTML5-Games.dll
+C:\GitHub\HTML5-Games\bin\HTML5-Games.pdb
+C:\GitHub\HTML5-Games\obj\Debug\HTML5-Games.csprojResolveAssemblyReference.cache
+C:\GitHub\HTML5-Games\obj\Debug\HTML5-Games.dll
+C:\GitHub\HTML5-Games\obj\Debug\HTML5-Games.pdb
