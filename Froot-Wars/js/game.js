@@ -4,7 +4,7 @@ $(window).load(function() {
 
 var game = {
     // Start initioalising objects, preloading assets and display start screen
-    init: function() {
+    init:function(){
         // Initialise objects
         levels.init();
 
@@ -39,25 +39,63 @@ var levels = {
             entities: []
         }
     ],
-    
+
     // Initialise level selection screen
-    init:function() {
+    init: function() {
         var html = "";
         for (var i = 0; i < levels.data.length; i++) {
             var level = levels.data[i];
             html += '<input type="button" value="' + (i + 1) + '">';
         }
-        
+
         $('#levelselectscreen').html(html);
-        
+
         // Set the button click event handlers to load level
         $('#levelselectscreen input').click(function() {
             levels.load(this.value - 1);
             $('#levelselectscreen').hide();
         });
     },
-    
+
     // Load all data and images for a specific level
-    load:function(number) {
+    load: function(number) {
     }
-}
+};
+
+var loader = {
+    loaded: true,
+    loadedCount: 0, // Assests that have been loaded so far
+    totalCount: 0, // Total number of assets that need to be loaded
+    
+    init:function() {
+        // check for sound support
+        var mp3Support, oggSuppourt;
+        var audio = document.createElement('audio');
+        if (audio.canPlayType) {
+            // Currently canPlayType() returns: "", "maybe" or "probably"
+            mp3Support = "" != audio.canPlayType('audio/mpeg');
+            oggSuppourt = "" != audio.canPlayType('audio/ogg; codecs="vorbis"');
+        } else {
+            // The audio tag is not supported
+            mp3Support = false;
+            oggSuppourt = false;
+        }
+        
+        // Check for ogg, then mp3, and finally set soundFileExtn to undifined
+        loader.soundFileExtn = oggSuppourt ? ".ogg" : mp3Support ? ".mp3" : undefined;      
+    },
+    
+    loadImage:function(url) {
+        this.totalCount++;
+        this.loaded = false;
+        $('#loadingscreen').show();
+        var image = new image();
+        image.src = url;
+        image.onload = loader.itemLoaded;
+        return image;
+    },
+    
+    itemLoaded:function() {
+        loader.loadedCount++;
+    }
+};
