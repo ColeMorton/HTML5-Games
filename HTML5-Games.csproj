@@ -61,8 +61,8 @@
     <Content Include="Content\Images\guide_sprite.png" />
     <Content Include="Content\Images\pixel_grid.jpg" />
     <Content Include="Content\Images\title_bg.png" />
-    <Content Include="Froot-Wars\images\Backgrounds\clouds-background.png" />
-    <Content Include="Froot-Wars\images\Backgrounds\desert-foreground.png" />
+    <Content Include="Froot-Wars\images\backgrounds\clouds-background.png" />
+    <Content Include="Froot-Wars\images\backgrounds\desert-foreground.png" />
     <Content Include="Froot-Wars\images\icons\level copy.png" />
     <Content Include="Froot-Wars\images\icons\level.png" />
     <Content Include="Froot-Wars\images\icons\level0.png" />
