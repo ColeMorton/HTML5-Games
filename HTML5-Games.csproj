@@ -61,6 +61,8 @@
     <Content Include="Content\Images\guide_sprite.png" />
     <Content Include="Content\Images\pixel_grid.jpg" />
     <Content Include="Content\Images\title_bg.png" />
+    <Content Include="Froot-Wars\images\Backgrounds\clouds-background.png" />
+    <Content Include="Froot-Wars\images\Backgrounds\desert-foreground.png" />
     <Content Include="Froot-Wars\images\icons\level copy.png" />
     <Content Include="Froot-Wars\images\icons\level.png" />
     <Content Include="Froot-Wars\images\icons\level0.png" />
@@ -77,6 +79,10 @@
     <Content Include="Froot-Wars\images\icons\return.png" />
     <Content Include="Froot-Wars\images\icons\settings.png" />
     <Content Include="Froot-Wars\images\icons\sound.png" />
+    <Content Include="Froot-Wars\images\loader.gif" />
+    <Content Include="Froot-Wars\images\slingshot copy.png" />
+    <Content Include="Froot-Wars\images\slingshot-front.png" />
+    <Content Include="Froot-Wars\images\slingshot.png" />
     <Content Include="Froot-Wars\images\splashscreen.png" />
     <Content Include="Froot-Wars\index.html" />
     <Content Include="Froot-Wars\js\game.js" />
