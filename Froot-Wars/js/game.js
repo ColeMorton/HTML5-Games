@@ -142,11 +142,9 @@ var game = {
 
         // Animate the characters
 
-
         //  Draw the background with parallax scrolling
         game.context.drawImage(game.currentLevel.backgroundImage, game.offsetLeft / 4, 0, 640, 480, 0, 0, 640, 480);
         game.context.drawImage(game.currentLevel.foregroundImage, game.offsetLeft, 0, 640, 480, 0, 0, 640, 480);
-
 
         // Draw the slingshot
         game.context.drawImage(game.slingshotImage, game.slingshotX - game.offsetLeft, game.slingshotY);
@@ -245,6 +243,7 @@ var loader = {
         image.onload = loader.itemLoaded;
         return image;
     },
+	
     soundFileExtn: ".ogg",
     loadSound: function(url) {
         this.totalCount++;
@@ -255,6 +254,7 @@ var loader = {
         audio.addEventListener("canplaythrough", loader.itemLoaded, false);
         return audio;
     },
+	
     itemLoaded: function() {
         loader.loadedCount++;
         $('#loadingmessage').html('Loaded ' + loader.loadedCount + ' of ' + loader.totalCount);
